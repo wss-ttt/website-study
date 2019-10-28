@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Swiper demo</title>
+
+		<link rel="stylesheet" href="css/swiper.min.css">
+
+		<style>
+			html,
+			body {
+				position: relative;
+				height: 100%;
+			}
+			
+			body {
+				background: #eee;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				color: #000;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.swiper-container {
+				width: 100%;
+				height: calc(100% - 50PX);
+			}
+			
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				background: #fff;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+			
+			.swiper-top {
+				display: flex;
+				justify-content: flex-start;
+			}
+			
+			.qiHuan {
+				flex: 1;
+				height: 50px;
+				background-color: #000000;
+				color: #FFFFFF;
+				border-left: 1px solid #FFFFFF;
+				border-right: 1px solid #FFFFFF;
+				box-sizing: border-box;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+			}
+			
+			.xuan {
+				color: red;
+				background-color: #fff;
+			}
+			
+			.swiper-slide{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class='swiper-top'>
+			<div class='qiHuan' data-index='0' data-xunClass='xuan'>第一</div>
+			<div class='qiHuan' data-index='1' data-xunClass='xuan'>第二</div>
+			<div class='qiHuan' data-index='2' data-xunClass='xuan'>第三</div>
+			<div class='qiHuan' data-index='3' data-xunClass='xuan'>第四</div>
+			<div class='qiHuan' data-index='4' data-xunClass='xuan'>第五</div>
+			<div class='qiHuan' data-index='5' data-xunClass='xuan'>第六</div>
+		</div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper" data-activeIndex=''>
+				<div class="swiper-slide">
+					好好学习 天天向上
+				</div>
+				<div class="swiper-slide">Slide 2</div>
+				<div class="swiper-slide">Slide 3</div>
+				<div class="swiper-slide">Slide 4</div>
+				<div class="swiper-slide">Slide 5</div>
+				<div class="swiper-slide">Slide 6</div>
+			</div>
+		</div>
+
+		<script src="js/swiper.min.js"></script>
+		<script src="js/xsw_js.js"></script>
+
+		<script>
+			xsw_swiper({
+				index: 0, //默认为0
+				data: function(index) { //监听事件
+					console.log(index) //监听到的index
+				}
+			})
+		</script>
+	</body>
+
+</html>

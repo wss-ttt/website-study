@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 800px;
+				height: 600px;
+				background-color: #ccc;
+				margin: 100px auto;
+				position: relative;
+			}
+			
+			.box .btngroup {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				width: 120px;
+			}
+			
+			.box .btngroup span {
+				display: inline-block;
+				width: 120px;
+				height: 40px;
+				background-color: #666;
+				text-align: center;
+				line-height: 40px;
+				margin-bottom: 5px;
+				cursor: pointer;
+			}
+			
+			.box .item {
+				width: 500px;
+				height: 500px;
+				background-color: #777;
+				display: none;
+				margin: auto;
+			}
+			
+			.box .item>div {
+				width: 100%;
+				height: 100%;
+				border: 1px solid red;
+			}
+			
+			.box .item:nth-child(1) {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="item">
+				<div id="pie"></div>
+			</div>
+			<div class="item">
+				<div id="bar"></div>
+			</div>
+			<div class="item">
+				<div id="line"></div>
+			</div>
+
+			<div class="btngroup">
+				<span>饼状图</span>
+				<span>柱状图</span>
+				<span>折线图</span>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var myChartPie = null; // 饼状图
+		var myChartBar = null; // 柱状图
+		var myChartLine = null; // 折线图
+		$(function() {
+			initPie();
+			
+			/*initBar();
+			initLine();*/
+			
+		});
+		// 切换事件
+		$('.btngroup span').click(function() {
+			var index = $(this).index();
+			console.log(index);
+			
+			$('.box .item').hide();
+			$('.box .item').eq(index).show();
+			if(index==0){
+				initPie();
+			}else if(index==1){
+				initBar();
+			}else{
+				initLine();
+			}
+		});
+		// 饼状图
+		function initPie() {
+			if(!myChartPie) {
+				myChartPie = echarts.init(document.getElementById('pie'));
+			}
+			var option = {
+				title: {
+					text: '某站点用户访问来源',
+					subtext: '纯属虚构',
+					x: 'center'
+				},
+				tooltip: {
+					trigger: 'item',
+					formatter: "{a} <br/>{b} : {c} ({d}%)"
+				},
+				legend: {
+					orient: 'vertical',
+					left: 'left',
+					data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+				},
+				series: [{
+					name: '访问来源',
+					type: 'pie',
+					radius: '55%',
+					center: ['50%', '60%'],
+					data: [{
+							value: 335,
+							name: '直接访问'
+						},
+						{
+							value: 310,
+							name: '邮件营销'
+						},
+						{
+							value: 234,
+							name: '联盟广告'
+						},
+						{
+							value: 135,
+							name: '视频广告'
+						},
+						{
+							value: 1548,
+							name: '搜索引擎'
+						}
+					],
+					itemStyle: {
+						emphasis: {
+							shadowBlur: 10,
+							shadowOffsetX: 0,
+							shadowColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					}
+				}]
+			};
+
+			myChartPie.setOption(option);
+		}
+
+		// 柱状图
+		function initBar() {
+			if(!myChartBar) {
+				myChartBar = echarts.init(document.getElementById('bar'));
+			}
+			var option = {
+				xAxis: {
+					type: 'category',
+					data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				},
+				yAxis: {
+					type: 'value'
+				},
+				series: [{
+					data: [120, 200, 150, 80, 70, 110, 130],
+					type: 'bar'
+				}]
+			};
+			myChartBar.setOption(option);
+		}
+
+		// 折线图
+		function initLine() {
+			if(!myChartLine) {
+				myChartLine = echarts.init(document.getElementById('line'));
+			}
+			var option = {
+				xAxis: {
+					type: 'category',
+					data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				},
+				yAxis: {
+					type: 'value'
+				},
+				series: [{
+					data: [820, 932, 901, 934, 1290, 1330, 1320],
+					type: 'line'
+				}]
+			};
+			myChartLine.setOption(option);
+		}
+	</script>
+
+</html>

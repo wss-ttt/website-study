@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+			}
+			
+			#bar{
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<button>清空</button>
+		<div id="bar"></div>
+	</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var myChartPie = null; // 饼状图
+		var myChartBar = null; // 柱状图
+		var myChartLine = null; // 折线图
+//		myChartBar = echarts.init(document.getElementById('bar'));
+		$(function() {
+			
+			initBar();
+			$(window).resize(function(){
+				myChartBar.resize();
+			});
+		});
+		
+		$('button').click(function(){
+//			myChartBar.clear();
+			
+//			myChart.dispose();
+			console.log(myChartBar);
+		});
+		// 柱状图
+		function initBar() {
+			console.log('柱状图初始化');
+			if(!myChartBar) {
+				myChartBar = echarts.init(document.getElementById('bar'));
+			}
+			var option = {
+				xAxis: {
+					type: 'category',
+					data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				},
+				yAxis: {
+					type: 'value'
+				},
+				series: [{
+					data: [120, 200, 150, 80, 70, 110, 130],
+					type: 'bar'
+				}]
+			};
+			myChartBar.setOption(option);
+			// 自适应处理
+//			$(window).resize(myChartBar.resize);
+		}
+
+	</script>
+
+</html>

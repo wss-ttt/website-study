@@ -1,0 +1,24 @@
+﻿@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 500;
+  src: local('IBM Plex Mono Medium Italic'), local('IBMPlexMono-MediumItalic'), url(../fonts/-f6sfjptagt5vm-kvkqdyu8n1iosjlr1gmov.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(../fonts/jtusjig1_i6t8kchkm459wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(../fonts/jturjig1_i6t8kchkm45_bzf3gnd-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Montserrat Black'), local('Montserrat-Black'), url(../fonts/jturjig1_i6t8kchkm45_epg3gnd-w.ttf) format('truetype');
+}

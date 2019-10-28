@@ -1,0 +1,110 @@
+﻿<html>
+
+	<head>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-table.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/bootstrap-table.js"></script>
+		<script src="js/bootstrap-table-export.js"></script>
+		<!--<script src="js/jquery.base64.js"></script>-->
+		<script src="js/tableexport.js"></script>
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="content">
+			<div id="content-body">
+				<div id="reportTableDiv" class="span10">
+					<table id="reportTable">
+					</table>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$('#reportTable').bootstrapTable({
+					method: 'get',
+					url:'js/data2.json',
+					cache: false,
+					height: 500,
+					striped: true,
+					pagination: true,
+					pageSize: 20,
+					pageNumber: 1,
+					pageList: [10, 20, 50, 100, 200, 500],
+					search: true,
+					showColumns: true,
+					showRefresh: true,
+					showExport: true,
+					exportTypes: ['csv', 'txt', 'xml'],
+					search: true,
+					clickToSelect: true,
+//					columns: [{
+//						field: "user_email",
+//						title: "email",
+//						align: "center",
+//						valign: "middle",
+//						sortable: "true"
+//					},  {
+//						field: "userstatus_end_time",
+//						title: "end_time",
+//						align: "center",
+//						valign: "middle",
+//						sortable: "true"
+//					}],
+					columns:[
+						{
+							field:'name',
+							title:'姓名'
+						},
+						{
+							field:'age',
+							title:'年龄'
+						}
+					]
+					/*onPageChange: function(size, number) {
+						//$("#pageSizeInput").val(size);
+						//$("#pageNumberInput").val(number);
+
+						//var form = $('#tableForm');
+						//form.action= '${base}/showReport';
+						//form.submit();
+					},*/
+					//onSort: function (name, order) {
+					// },
+					//formatShowingRows: function (pageFrom, pageTo, totalRows) {
+					//	return '';
+					// },
+					//formatRecordsPerPage: function () {
+					//	return '';
+					//  },
+					formatNoMatches: function() {
+						return '暂无数据';
+					}
+				});
+
+				$(window).resize(function() {
+					$('#reportTable').bootstrapTable('resetView');
+				});
+
+				var data = [];
+
+				function getData() {
+					return new Promise((resolve, reject) => {
+						// 获取数据
+						$.get('js/data.txt', function(res) {
+							reject(eval());
+						})
+					});
+				}
+			});
+		</script>
+	</body>
+
+</html>

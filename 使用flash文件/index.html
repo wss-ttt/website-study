@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/animate.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background-color: #000;
+			}
+			
+			embed {
+				/*border: 1px solid red;*/
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			OBJECT{
+				border: 1px solid red;
+				width: 60%;
+				height: 60%;
+				position: absolute;
+				top:50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			h1 {
+				color: #fff;
+				animation-delay: 1s;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<!--<embed src="flash/logofx1.swf" width="60%" height="60%"></embed>-->
+
+			<OBJECT>
+				<PARAM NAME="movie" VALUE="flash/logofx1.swf">
+				<PARAM NAME="quality" VALUE="high">
+				<param name="wmode" value="transparent" />
+				<embed wmode="transparent" src="flash/logofx1.swf" 
+value="transparent" quality="high" 
+type="application/x-shockwave-flash"></embed>
+			</OBJECT>
+
+		</div>
+	</body>
+
+</html>

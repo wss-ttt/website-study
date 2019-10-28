@@ -1,0 +1,163 @@
+﻿@charset "UTF-8";
+.page{
+    min-width: 280px;
+    max-width: 1024px;
+    padding-bottom: 0.5rem;
+}
+.ss-header{
+    display: none!important;
+}
+/*banner部分*/
+.banner-p{
+    display: none!important;
+}
+.banner-w{
+    display: block!important;
+}
+.banner-w{
+    position: relative;
+}
+.banner-w .logo{
+    position: absolute;
+    top:0.156rem;
+    left: 0.105rem;
+}
+.banner-w .logo img{
+    height: 0.18rem;
+}
+/*边距重置*/
+.grid-inner-w{
+    width: 94.44444%;
+    margin: 0 auto;
+}
+/*主要内容  包括表单  展示 */
+.maincont-p{
+    display: none;
+}
+.maincont-w{
+    display: block!important;
+}
+/*表单*/
+.form-w{
+    margin: 0 auto;
+    width: 2.7rem;
+}
+.form-w .form-box{
+    font-size: 0.14rem;
+}
+.form-w .info-list{
+    margin-bottom: 0.2rem;
+}
+.form-w .labelname{
+    line-height: 0.42rem;
+}
+.form-w .printinfo{
+    width:1.8rem;
+    height:0.42rem;
+    border-radius: 0.08rem;
+    -webkit-border-radius: 0.08rem;
+    -moz-border-radius: 0.08rem;
+    border:0.02rem solid #0094d9;
+}
+.form-w  input.printinfo {
+    padding:0.02rem 0.08rem;
+    outline: 0;
+}
+.form-w  .form-box .sexList .labelname,.sexwrap{
+    line-height: 0.65rem;
+}
+.form-w .sexbox{
+    margin-left: 0.34rem;
+}
+
+.form-w .info-list .select-wrap{
+    margin-left:0.17rem ;
+}
+.form-w .info-list .select-wrap{
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left:8%;
+    background: url("../images/triangle_03.png") no-repeat 92% center;
+    line-height: 0.42rem;
+    padding:0 0.08rem;
+}
+.form-w .tipinfo{
+    font-size: 0.12rem;
+    line-height: 0.18rem;
+    padding-top: 0;
+    padding-bottom:0.311rem;
+}
+/*表单结束*/
+/*tab切换*/
+.nav-link{
+    margin-top: 0;
+}
+.nav-link>li{
+    float: left;
+    text-align: center;
+    width: 33%;
+    margin-right:0.3333%;
+    height:0.4rem;
+    line-height:0.4rem;
+}
+.nav-link>li>a{
+    display: block;
+    width: 100%;
+    font-size: 0.16rem;
+
+}
+.firstli{
+    -webkit-border-top-left-radius: 0.08rem;
+    -webkit-border-bottom-left-radius:0.08rem;
+    border-bottom-left-radius: 0.08rem;
+    border-top-left-radius: 0.08rem;
+}
+.lastli{
+    -webkit-border-top-right-radius: 0.08rem;
+    -webkit-border-bottom-right-radius: 0.08rem;
+    border-bottom-right-radius: 0.08rem;
+    border-top-right-radius: 0.08rem;
+}
+/*tab选项卡*/
+.tabcont{
+    display: none;
+}
+/*按钮样式*/
+.submitbtn{
+    text-align: center;
+    color: #ffffff;
+    background-color: #0095da;
+    cursor: pointer;
+}
+.submitbtn-p{
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    font-size: 22px;
+}
+/*底部控制显示与隐藏*/
+.footer-p{
+    display: none;
+}
+.footer-w{
+    display: block!important;
+}
+.submitbtn-w{
+    display: block;
+}
+/*悬浮按钮*/
+.submitbtn-w{
+    position: fixed;
+    width: 100%;
+    max-width: 1020px;
+    bottom:0;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.18rem;
+    z-index:900;
+}
+

@@ -1,0 +1,114 @@
+﻿@charset "UTF-8";
+body,html{
+    margin: 0 auto;
+    height: 100%;
+    font-size: 14px;
+    font-family: Microsoft YaHei, SimHei,Arial, tahoma;
+    line-height: 1;
+    background-color: #ffffff;
+}
+/*浮动设置*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*字体样式及位置设置*/
+.text-align-center{
+    text-align: center;
+}
+.text-algin-left{
+    text-align: left;
+}
+.text-algin-right{
+    text-align: right;
+}
+.text-font-weight{
+    font-weight: 700;
+}
+/*边距重置*/
+.margin-lf-0{
+    margin-left: 0!important;
+}
+.margin-rg-0{
+    margin-right: 0!important;
+}
+.margin-tp-0{
+    margin-top:0!important;
+}
+.margin-bt-0{
+    margin-bottom:0!important;
+}
+.padding-lf-0{
+    padding-left: 0!important;
+}
+.padding-rg-0{
+    padding-right: 0!important;
+}
+.padding-tp-0{
+    padding-top: 0!important;
+}
+.padding-bt-0{
+    padding-bottom: 0!important;
+}
+/*颜色的设置*/
+.bg-color-0080d7{
+    background-color: #0080d7;
+}
+.text-color-434343{
+    color: #434343;
+}
+.text-color-ffffff{
+    color: #ffffff;
+}
+/*宽度设置*/
+.width-10{
+    width: 10%;
+}
+.width-15{
+    width: 15%;
+}
+.width-25{
+    width: 25%;
+}
+.width-35{
+    width: 35%;
+}
+.width-20{
+    width: 20%;
+}
+.width-30{
+    width: 30%;
+}
+.width-33{
+    width: 33%;
+}
+.width-35{
+    width: 35%;
+}
+.width-50{
+    width: 50%;
+}
+.width-65{
+    width: 65%;
+}
+
+/*等待加载*/
+.loading{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom:0;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.5);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+    text-align: center;
+    display: none;
+}
+.loading>img{
+    position: absolute;
+    left: 50%;
+    top:50% ;
+}

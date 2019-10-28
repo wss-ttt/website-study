@@ -1,0 +1,28 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*时间人数开始*/
+.time{ width:100%; height:298px; float:left; background:url(../images/timebg.png) no-repeat center; background-size:cover;}
+.time_content{ width:1200px; height:298px; margin:0 auto;}
+.time_left{ width:40%; max-width:480px; float:left; height:298px;}
+.time_left h1{ width:100%; float:left; height:24px; line-height:24px; font-size:22px; text-align:center; color:#FFF; font-weight:400; margin-top:96px;}
+.time_left h2{ width:100%; float:left; height:56px; line-height:56px; font-size:54px; text-align:center; color:#FFF; margin-top:12px; font-weight:bold;}
+
+.time_right{ width:60%; max-width:720px; height:298px; float:left;}
+.wrapper { width: 630px; height:90px; float:left; margin-left:100px; margin-top:110px; display:none;}
+.wrapper1{ width:200px; float:left; height:90px;}
+.wrapper2{ width:200px; float:left; height:90px; margin-left:20px; border-right:1px solid #FFF; border-left:1px solid #FFF;}
+.wrapper3{ width:200px; float:left; height:90px;}
+
+.counter { color:#ffe400; border-radius: 5px;}
+.time1{ width:100px; height:54px; float:left;}
+.time1 h1{ float:left;}
+.time1 h2{ float:left;}
+.time2{ width:70px; height:54px; float:left; margin-left:50px;}
+.time3{ width:100px; height:54px; float:left; text-align:center;margin-left:40px;}
+.timex{ width:50px; height:30px; margin-top:24px;color:#FFF; float:left;}
+.timey{ width:200px; float:left; color:#FFF;}
+.wrapper2 .timey{ width:148px; margin-left:52px; float:left;}
+.wrapper3 .timey{ width:152px; margin-left:48px; float:left;}
+.count-title { font-weight: normal; text-align: center; }
+.count-text { font-size: 13px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
+/*时间人数结束*/

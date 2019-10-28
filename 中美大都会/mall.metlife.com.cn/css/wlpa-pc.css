@@ -1,0 +1,8 @@
+﻿@charset "UTF-8";
+/*控制显示与隐藏*/
+.smallshow-wap{
+    display: none;
+}
+.form-p{
+    top:130px;
+}

@@ -1,0 +1,47 @@
+﻿@charset "UTF-8";
+/*控制显示与隐藏*/
+.smallshow-wap{
+    display: block;
+}
+.smallshow-pc{
+    display: none;
+}
+.pcWrap{
+    display: none;
+}
+.wapWrap{
+    display: block;
+}
+.ss-bottom{
+    display: none;!important;
+}
+.submitbtn-static{
+    width: 2.73rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    margin: 0 auto 0.2rem;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+
+}
+.page{
+    padding-bottom: 0.2rem;
+}
+.fix-iphonex-adaption{
+    width: 100%;
+    height: 0.34rem;
+    background-color: #ffffff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: none;
+}
+@media only screen and (device-width: 375px) and (device-height: 812px){
+    .fix-iphonex-adaption {
+       display: block!important;
+    }
+    .page{
+        padding-bottom: 0.6rem;
+    }
+}

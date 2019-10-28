@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/animate.css" />
+
+		<style type="text/css">
+			div {
+				width: 1000px;
+				height: 300px;
+				margin: 30px auto;
+			}
+			
+			.red {
+				background-color: red;
+			}
+			
+			.green {
+				background-color: green;
+			}
+			
+			.blue {
+				background-color: blue;
+			}
+			.yellow{
+				background-color: yellow;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="red wow fadeInDown" data-wow-duration="2s"></div>
+		<div class="green wow slideInRight"></div>
+		<div class="blue wow bounceInLeft"></div>
+		<div class="green wow slideInRight"></div>
+		<div class="yellow wow bounceInLeft"></div>
+	</body>
+	<script src="js/wow.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		wow = new WOW({
+			animateClass: 'animated',
+			offset: 100
+		});
+		wow.init();
+	</script>
+
+</html>

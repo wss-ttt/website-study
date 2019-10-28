@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>kxbdMarquee 模拟Marquee无缝滚动 </title>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {
+			font-size: 12px;
+			font-family: "微软雅黑"
+		}
+		
+		a {
+			color: #333;
+			text-decoration: none;
+		}
+		
+		ul {
+			list-style: none;
+		}
+		
+		#marquee1 {
+			width: 310px;
+			height: 45px;
+			overflow: hidden;
+			background: #333;
+			border: 2px solid #333;
+			margin: 20px auto 0;
+		}
+		
+		#marquee1 ul li {
+			float: left;
+			padding: 0 1px;
+		}
+		
+		#marquee1 ul li img {
+			display: block;
+		}
+		
+		
+		.bg{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-color: #ccc;
+			overflow: hidden;
+		}
+		.bg ul{
+			height:  calc( 938px * 6);
+			transition: all 1s linear;
+		}
+		.bg ul li{
+			font-size:60px;
+			color:#fff;
+		}
+		.bg ul li:nth-child(1){
+			height: 938px;
+			background: url('picture/login_bg_first.jpg') no-repeat;
+		}
+		.bg ul li:nth-child(2){
+			height: 938px;
+			background: url('picture/login_bg_second.jpg') no-repeat;
+		}
+		.bg ul li:nth-child(3){
+			height: 938px;
+			background: url('picture/login_bg_third.jpg') no-repeat;
+		}
+		.bg ul li:nth-child(4){
+			height: 938px;
+			background: url('picture/login_bg_fourth.jpg') no-repeat;
+		}
+		.bg ul li:nth-child(5){
+			height: 938px;
+			background: url('picture/login_bg_fifth.jpg') no-repeat;
+		}
+		.bg ul li:nth-child(6){
+			height: 938px;
+			background: url('picture/login_bg_sixth.jpg') no-repeat;
+		}
+		
+		.btns{
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			height: 50px;
+			background-color: rgba(0,0,0,.5);;
+		}
+	</style>
+	</head>
+
+	<body>
+		<div class="bg">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>4</li>
+				<li>6</li>
+			</ul>
+		</div>
+		
+		<div class="btns">
+			<button>开始你的表演</button>
+		</div>
+		
+		<script src="js/jquery-1.3.2.min.js"></script>
+		<script>
+			var t = -938*5;
+			$(function(){
+			});
+			
+			$('button').click(function(){
+				
+				$('ul').animate({
+					'transform':'translateY(-938px)'
+				},1000);
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.container{
+				width: 800px;
+				background-color: #CCCCCC;
+				margin: auto;
+			}
+			.header{
+				height: 200px;
+				background-color: #0084C9;
+			}
+			.content{
+				height: 500px;
+			}
+			.content .left{
+				width: 50%;
+				float: left;
+				/*height: 500px;*/
+				background-color: red;
+			}
+			.content .right{
+				width: 50%;
+				float: right;
+				height: 500px;
+				background-color: #00A8FF;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header"></div>
+			<div class="content">
+				<div class="left scrollpoint sp-effect1"></div>
+				<div class="right"></div>
+			</div>
+		</div>
+	</body>
+	<script src="js/waypoints.min.js"></script>
+</html>

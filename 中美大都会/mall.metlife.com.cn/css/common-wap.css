@@ -1,0 +1,273 @@
+﻿@charset "UTF-8";
+.page{
+    min-width: 320px;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+i.sex{
+    width:0.2rem;
+    height:0.2rem;
+    background-image: url(../images/sex_unckecked.png) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 0.1rem;
+}
+.proto-checkbox i.checked {
+    background-image: url(../images/ui-checked.png)
+}
+
+.proto-checkbox i.unchecked {
+    background-image: url(../images/ui-unchecked.png)
+}
+.ss-bottom{
+    display: none;
+}
+.ui-tg-panel .valide-anim{
+    line-height: 0.2rem;
+}
+/*新增弹窗样式*/
+#pc-floateWindow{
+    display: none;
+}
+#wap-floateWindow{
+    display: block;
+}
+/*新增弹窗样式*/
+.floateWindow.ani {
+    right: 50%;
+    margin-right: -100px;
+    top: 120px;
+}
+.floateWindow.ani2 {
+    right: 0.1rem;
+    bottom:0.46rem;
+    z-index: 960;
+}
+
+.floateWindow .front {
+    width: 200px;
+    height: 265px;
+    background-size: 200px auto;
+    padding-top:175px;
+}
+.floateWindow .front.ani2{
+    width:50px;
+    height:48px;
+    background-image: url("../images/k_pc_bg.png");
+    background-size: 50px;
+    padding-top: 33px;
+}
+.floateWindow.ani2 {
+    -webkit-animation: scaled1 0.6s linear;
+    -moz-animation: scaled1 0.6s linear;
+    animation: scaled1 0.6s linear;
+}
+.floateWindow.ani2.last{
+    animation: rotate 2s  1s  infinite;
+    -webkit-animation: rotate 2s  1.5s infinite;
+    -webkit-transition: all 1s cubic-bezier(0.755,0.50,0.855,0.060);
+    -moz-transition: all 1s cubic-bezier(0.755,0.50,0.855,0.060);
+    -o-transition: all 1s cubic-bezier(0.755,0.50,0.855,0.060);
+    -ms-transition: all 1s cubic-bezier(0.755,0.50,0.855,0.060);
+    transition: all 1s cubic-bezier(0.755,0.50,0.855,0.060);
+}
+.floateWindow .knowBtn {
+    width: 134px;
+    height: 30px;
+    background-size: 85px;
+    background-image: url("../images/text_02.png");
+}
+.floateWindow .front.ani2   .orderBtn {
+    width: 100%;
+    height: 10px;
+    background: url("../images/text_01.png") no-repeat center;
+    background-size: 42px;
+}
+
+.floateWindow .closeTool {
+    width: 26px;
+    height: 26px;
+    margin: 80px auto 0;
+    background: url("../images/close_tool.png") no-repeat center;
+    background-size: 26px;
+    cursor: pointer;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    /*初始状态 透明度为0*/
+    40% {
+        opacity: 0;
+    }
+    /*过渡状态 透明度为0*/
+    100% {
+        opacity: 1;
+    }
+    /*结束状态 透明度为1*/
+}
+@-webkit-keyframes scaled1 {
+    0% {
+        right: 50%;
+        margin-right: -100px;
+        bottom: 50%;
+    }
+
+    100% {
+        right:0 ;
+        bottom:0.49rem;
+    }
+
+}
+
+@-webkit-keyframes scaled1{
+    0% {
+        right: 50%;
+        margin-right: -100px;
+        bottom: 50%;
+    }
+
+    100% {
+        right:0.1rem ;
+        bottom:0.49rem;
+    }
+}
+
+@keyframes scaled1 {
+    0% {
+        right: 50%;
+        margin-right: -100px;
+        bottom: 50%;
+    }
+
+    100% {
+        right:0.1rem;
+        bottom:0.49rem;
+    }
+
+}
+@keyframes rotate {
+    0% {
+        transform:scale(1,0.8) translateY(10px);
+        -webkit-transform:scale(1,0.8) translateY(10px);
+        -moz-transform:scale(1,0.8) translateY(10px) ;
+    }
+    20%{
+        transform:  translateY(-16px) scale(1,0.9);
+        -webkit-transform:  translateY(-16px) scale(1,0.9);
+        -moz-transform:  translateY(-16px) scale(1,0.9);
+    }
+    22%{
+        transform: translateY(-10px) scale(1,1) ;
+        -webkit-transform: translateY(-10px) scale(1,1) ;
+        -moz-transform: translateY(-10px) scale(1,1) ;
+    }
+    26%{
+        transform: translateY(0) scale(1,1);
+        -webkit-transform: translateY(0) scale(1,1);
+        -moz-transform: translateY(0) scale(1,1);
+    }
+    28%{
+        transform:  translateY(10px) scale(1, 0.8);
+        -webkit-transform:  translateY(10) scale(1, 0.8);
+        -moz-transform:  translateY(10) scale(1, 0.8);
+    }
+    31%{
+        transform:  translateY(0) scale(1, 1);
+        -webkit-transform:  translateY(0) scale(1, 1);
+        -moz-transform:  translateY(0) scale(1, 1);
+    }
+
+    100%{
+        transform:  translateY(0) scale(1, 1);
+        -webkit-transform:  translateY(0) scale(1, 1);
+        -moz-transform:  translateY(0) scale(1, 1);
+    }
+
+
+}
+@-webkit-keyframes rotate {
+    0% {
+        transform:scale(1,0.8) translateY(10px);
+        -webkit-transform:scale(1,0.8) translateY(10px);
+        -moz-transform:scale(1,0.8) translateY(10px) ;
+    }
+    20%{
+        transform:  translateY(-16px) scale(1,0.9);
+        -webkit-transform:  translateY(-16px) scale(1,0.9);
+        -moz-transform:  translateY(-16px) scale(1,0.9);
+    }
+    22%{
+        transform: translateY(-10px) scale(1,1) ;
+        -webkit-transform: translateY(-10px) scale(1,1) ;
+        -moz-transform: translateY(-10px) scale(1,1) ;
+    }
+    26%{
+        transform: translateY(0) scale(1,1);
+        -webkit-transform: translateY(0) scale(1,1);
+        -moz-transform: translateY(0) scale(1,1);
+    }
+    28%{
+        transform:  translateY(10px) scale(1, 0.8);
+        -webkit-transform:  translateY(10) scale(1, 0.8);
+        -moz-transform:  translateY(10) scale(1, 0.8);
+    }
+    31%{
+        transform:  translateY(0) scale(1, 1);
+        -webkit-transform:  translateY(0) scale(1, 1);
+        -moz-transform:  translateY(0) scale(1, 1);
+    }
+
+    100%{
+        transform:  translateY(0) scale(1, 1);
+        -webkit-transform:  translateY(0) scale(1, 1);
+        -moz-transform:  translateY(0) scale(1, 1);
+    }
+
+
+}
+@-moz-keyframes  rotate{
+    0% {
+        transform:scale(1,0.8) translateY(10px);
+        -webkit-transform:scale(1,0.8) translateY(10px);
+        -moz-transform:scale(1,0.8) translateY(10px) ;
+    }
+    20%{
+        transform:  translateY(-16px) scale(1,0.9);
+        -webkit-transform:  translateY(-16px) scale(1,0.9);
+        -moz-transform:  translateY(-16px) scale(1,0.9);
+    }
+    22%{
+        transform: translateY(-10px) scale(1,1) ;
+        -webkit-transform: translateY(-10px) scale(1,1) ;
+        -moz-transform: translateY(-10px) scale(1,1) ;
+    }
+    26%{
+        transform: translateY(0) scale(1,1);
+        -webkit-transform: translateY(0) scale(1,1);
+        -moz-transform: translateY(0) scale(1,1);
+    }
+    28%{
+        transform:  translateY(10px) scale(1, 0.8);
+        -webkit-transform:  translateY(10) scale(1, 0.8);
+        -moz-transform:  translateY(10) scale(1, 0.8);
+    }
+    31%{
+        transform:  translateY(0) scale(1, 1);
+        -webkit-transform:  translateY(0) scale(1, 1);
+        -moz-transform:  translateY(0) scale(1, 1);
+    }
+
+    100%{
+        transform:  translateY(0) scale(1, 1);
+        -webkit-transform:  translateY(0) scale(1, 1);
+        -moz-transform:  translateY(0) scale(1, 1);
+    }
+}
+.front {
+    animation: fade-in; /*动画名称*/
+    animation-duration: 1s; /*动画持续时间*/
+    -webkit-animation: fade-in 1s; /*针对webkit内核*/
+}

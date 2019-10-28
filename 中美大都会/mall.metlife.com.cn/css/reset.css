@@ -1,0 +1,75 @@
+﻿@charset "utf-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,button,input{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-text-size-adjust: 100%;
+}
+ul li,ol li{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+a{
+    text-decoration: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix{
+    zoom: 1;
+}
+/*边距重置*/
+.mt-0{
+  margin-top: 0!important;
+}
+.mr-0{
+    margin-right: 0!important;
+}
+.mb-0{
+    margin-bottom: 0!important;
+}
+.ml-0{
+    margin-left: 0!important;
+}
+.pt-0{
+    padding-top: 0!important;
+}
+.pr-0{
+    padding-right: 0!important;
+}
+.pb-0{
+    padding-bottom: 0!important;
+}
+.pl-0{
+    padding-left: 0!important;
+}
+

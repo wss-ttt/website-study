@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrapper{
+				height: 1000px;
+				padding: 100px 10%;
+			}
+			.box{
+				width: 300px;
+				
+				height: 300px;
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="box slide-left"></div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fadethis.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$(window).fadeThis({
+
+				speed: 1000,
+
+			});
+
+		});
+	</script>
+
+</html>

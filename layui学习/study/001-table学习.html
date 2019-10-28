@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			table{
+				width: 100%;
+				border-collapse: collapse;
+			}
+			table thead tr{
+				
+			}
+			table thead tr th{
+				border: 1px solid #E6E6E6;
+				padding: 9px 15px;
+			    min-height: 20px;
+			    line-height: 20px;
+			    font-size: 14px;
+			    text-align: left;
+			}
+			table tbody tr{
+				
+			}
+			table tbody tr td{
+				border: 1px solid #E6E6E6;
+				padding: 9px 15px;
+			    min-height: 20px;
+			    line-height: 20px;
+			    font-size: 14px;
+			}
+			table[lay-skin=line] td,table[lay-skin=line] th{
+				border-width: 0 0 1px;
+			}
+		</style>
+	</head>
+	<body>
+		<table class="layui-table">
+			<colgroup>
+				<col width="150">
+				<col width="200">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th>昵称</th>
+					<th>加入时间</th>
+					<th>签名</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>贤心</td>
+					<td>2016-11-29</td>
+					<td>人生就像是一场修行</td>
+				</tr>
+				<tr>
+					<td>许闲心</td>
+					<td>2016-11-28</td>
+					<td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+				</tr>
+				<tr>
+					<td>贤心</td>
+					<td>2016-11-29</td>
+					<td>人生就像是一场修行</td>
+				</tr>
+				<tr>
+					<td>许闲心</td>
+					<td>2016-11-28</td>
+					<td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+				</tr>
+			</tbody>
+		</table>
+		<button>改变table的风格</button>
+	</body>
+	<script type="text/javascript">
+		var btn = document.querySelector('button');
+		var table = document.querySelector('table');
+		btn.onclick= function(){
+			table.setAttribute('lay-skin','line');
+		}
+	</script>
+</html>

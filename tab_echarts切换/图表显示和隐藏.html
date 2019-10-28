@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#echarts{
+				width: 800px;
+				height: 600px;
+				background-color: #ccc;
+				margin: 100px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="show">显示</button>
+		<button class="hide">隐藏</button>
+		<hr />
+		<div id="echarts"></div>
+	</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var myChartBar=null;
+		$(function(){
+			initBar();
+		});
+		
+		// 隐藏
+		$('.hide').click(function(){
+			$('#echarts').hide();  // 隐藏
+		});
+		// 显示
+		$('.show').click(function(){
+			$('#echarts').show();  // 显示
+		});
+		// 柱状图
+		function initBar() {
+			console.log('柱状图初始化');
+			if(!myChartBar) {
+				myChartBar = echarts.init(document.getElementById('echarts'));
+			}
+			var option = {
+				xAxis: {
+					type: 'category',
+					data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				},
+				yAxis: {
+					type: 'value'
+				},
+				series: [{
+					data: [120, 200, 150, 80, 70, 110, 130],
+					type: 'bar'
+				}]
+			};
+			myChartBar.setOption(option);
+		}
+
+	</script>
+</html>
